@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Department info</h1>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.dep_name.label }}<br>
+            {{ form.dep_name(size=32) }}
+            {% for error in form.dep_name.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p> {{ form.human_space() }} {{ form.human_space.label }}</p>
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}

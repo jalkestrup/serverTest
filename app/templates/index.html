@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+    <h1>Overview of buildings: </h1>
+    {% for post in posts %}
+    <div><p> Site: {{ post.author.username }} , is: <b>{{ post.width }} m</b> wide, and <b>{{ post.height }} m</b> high</p></div>
+    </form>
+    {% endfor %}
+{% endblock %}
